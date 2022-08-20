@@ -1,0 +1,22 @@
+<div class="relative">
+  <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-red-400 text-white">
+    <p class="text-2xl"> Unformated Date - {{ date }} </p>
+    <p class="text-2xl">Formated Date With Angular Pipe - {{ date | date:"MM/dd/yyyy" }} </p>
+  </div>
+  
+  <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-gray-800 text-white">
+    
+    <p class="text-2xl"> Unformated Currency - {{ value }} </p>
+    <p>default currency as USD if no parameters provided</p>
+
+    <div class="text-2xl my-5"> </div>
+
+    <p class="text-2xl">Formated Currency With Angular Pipe - {{value | currency}} </p>
+    <p class="text-2xl">Formated Currency With Angular Pipe - {{value | currency: "EUR"}} </p>
+
+  </div>
+  <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-white text-black">
+    <p class="text-2xl"> {{fahrenheit}} fahrenheit is equvilent to {{fahrenheit | temperatureConverter: temperature.CELSIUS | number : '1.2-2'  }} celsius</p> 
+    <p class="text-2xl"> {{celsius | number : '1.2-2' }} celsius is equvilent to  {{celsius | temperatureConverter: temperature.FAHRENHEIT | number : '1.0-0' }} fahrenheit</p>
+  </div>
+</div>
